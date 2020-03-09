@@ -3,11 +3,7 @@
 {% block body %}
 <div class="modal-dialog modal-lg">
     <div class="modal-content">
-        {% if object %}
-          <form role="form" action="{% url 'update' user.id %}" method="post">
-        {% else %}
-          <form role="form" action="{% url 'create' %}" method="post">
-        {% endif %}
+        <form role="form" action="{% url 'create' %}" method="post">
             <div class="modal-header">
                 <h5>Create</h5>
                 <button type="button" class="close" data-dismiss="modal">x</button>

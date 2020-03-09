@@ -3,18 +3,14 @@
 {% block body %}
 <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      {% if object %}
-        <form role="form" action="{% url 'create' %}" method="post">
-      {% else %}
-        <form role="form" action="{% url 'update' user.id %}" method="post">
-      {% endif %}
+        <form role="form" action="{% url 'update' person.id %}" method="post">
             <div class="modal-header">
                 <h5>Update</h5>
                 <button type="button" class="close" data-dismiss="modal">x</button>
             </div>
-            <div class="modal-body">{% csrf_token %}
+            <div class="modal-body">
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body">{% csrf_token %}
                         <label>{{ form.first_name.label }}</label>
                         <br />
                         {{ form.first_name }}

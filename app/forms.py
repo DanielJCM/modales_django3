@@ -28,26 +28,3 @@ class PersonForm(forms.ModelForm):
             'first_name',
             'last_name',
         ]
-
-class PersonUpdateForm(forms.ModelForm):
-    """
-    Form that manages the person model fields
-    """
-    first_name = forms.CharField(widget=TextInput(attrs={
-            'class':'form-control input-md',
-            'style': 'width: 100%; display: inline;',
-        }), required = True)
-
-    last_name = forms.CharField(widget=TextInput(attrs={
-            'class':'form-control input-md',
-            'style': 'width: 100%; display: inline;',
-        }), required = True)
-
-    class Meta:
-
-        model = Person
-
-        fields = [
-            'first_name',
-            'last_name',
-        ]

@@ -3,7 +3,7 @@ from django.views.generic import ListView, TemplateView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from app.models import Person
-from app.forms import PersonForm, PersonUpdateForm
+from app.forms import PersonForm
 from django.shortcuts import render
 
 
@@ -36,7 +36,7 @@ class Update(UpdateView):
     Class that allows you to update the data of a Person object.
     """
     model = Person
-    form_class = PersonUpdateForm
+    form_class = PersonForm
     template_name = "app/person_update.html"
     #fields = ['first_name', 'last_name']
     success_url = reverse_lazy('list')

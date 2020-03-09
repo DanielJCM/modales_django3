@@ -12,3 +12,12 @@ function cerrar_modal()
         $('#popup').modal('hide');
         return false;
 }
+
+$(document).ready(function()
+{
+    var table = $('#tabla').dataTable( {
+        "language": {
+                url: "/static/localizacion/es_ES.json"
+        }
+    } );
+});
