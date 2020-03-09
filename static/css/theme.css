@@ -2,5 +2,11 @@
     color: green !important;
 }
 .btn-default{
-    background-color: #FFF;
+    border-color: lightgray;
+}
+.btn-default:hover{
+    background: lightgray;
+}
+.margen{
+    margin: 20px;
 }
